@@ -1,4 +1,4 @@
-# Eldoret & Kapsabet Vibes – Highland Explorer
+# Eldoret Vibes – Highland Explorer
 
 A hyper-local Rift Valley travel and student companion for hangouts, scenic waterfalls, hiking trails, sports clubs, and tea escarpments across **Eldoret (Uasin Gishu County)** and **Kapsabet (Nandi County)**.
 
