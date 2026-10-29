@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode: "class", theme: {extend: {colors: {"on-secondary-fixed": "#1b1c1c", "secondary-fixed-dim": "#c7c6c6", secondary: "#5e5e5e", "primary-fixed": "#dbe1ff", "on-tertiary-fixed-variant": "#00531e", tertiary: "#006527", "error-container": "#ffdad6", "on-error-container": "#93000a", surface: "#fbf9f8", "on-surface-variant": "#424656", "outline-variant": "#c3c6d8", "surface-container": "#efeded", "surface-container-low": "#f5f3f3", "tertiary-fixed": "#96f8a1", "surface-container-high": "#eae8e7", "on-primary-fixed": "#00174c", primary: "#004ccd", "on-secondary-container": "#626263", "primary-container": "#0f62fe", "inverse-on-surface": "#f2f0f0", "on-tertiary-fixed": "#002108", "surface-dim": "#dbd9d9", "inverse-primary": "#b4c5ff", "secondary-container": "#e1dfdf", "on-error": "#ffffff", "on-secondary": "#ffffff", error: "#ba1a1a", "surface-container-highest": "#e4e2e2", "on-primary": "#ffffff", outline: "#737687", "on-primary-container": "#f3f3ff", "surface-bright": "#fbf9f8", "surface-tint": "#0052dd", "tertiary-container": "#198038", "on-secondary-fixed-variant": "#464747", background: "#fbf9f8", "primary-fixed-dim": "#b4c5ff", "tertiary-fixed-dim": "#7bdb87", "on-background": "#1b1c1c", "inverse-surface": "#303030", "secondary-fixed": "#e4e2e2", "on-tertiary-container": "#d4ffd2", "on-primary-fixed-variant": "#003da9", "surface-variant": "#e4e2e2", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "on-surface": "#1b1c1c"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"gutter-sm": "0.75rem", gutter: "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-lg": "3rem", "space-md": "1rem", "space-xl": "2rem", margin: "1.5rem"}, fontFamily: {"label-md": ["IBM Plex Sans"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["IBM Plex Sans"], "body-lg": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["IBM Plex Sans"], "label-xs": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"]}, fontSize: {"label-md": ["14px", {lineHeight: "18px", fontWeight: "500"}], "headline-md": ["24px", {lineHeight: "32px", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "24px", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "body-sm": ["14px", {lineHeight: "20px", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "40px", fontWeight: "600"}], "label-xs": ["11px", {lineHeight: "14px", fontWeight: "700"}], "headline-lg-mobile": ["24px", {lineHeight: "32px", fontWeight: "700"}], "headline-sm": ["20px", {lineHeight: "28px", fontWeight: "600"}], "display-hero": ["48px", {lineHeight: "56px", fontWeight: "800"}], "display-hero-mobile": ["32px", {lineHeight: "40px", fontWeight: "800"}], "label-sm": ["12px", {lineHeight: "16px", fontWeight: "600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="Eldoret Vibes Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8h9Ln2e8vjHdAEXap1uHtAS5U3SsTRx3m71an-DMyngjy48-WLW0B3St6pGLV-f3GDCADOO6c4TM4F4SIby0RQtrLoacOAiKACFgDm_4vYlC2qcafEgBrYAk_cjTbf8u36FN-RzTi6XoL4wBc7Zi0o_NZUWAy1BEYcCxNV5BIEHhO4zw4p_RW-D6r3Squ10FFAvJ_F5EEbK7JTOed-Q77g5-w97czRfEgFAWIgS0"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">Eldoret Vibes</span><span class="font-label-xs text-label-xs uppercase tracking-wider text-primary">Uasin Gishu Explorer</span></div></div><div class="hidden xl:flex items-center flex-1 max-w-md mx-space-sm"><div class="relative w-full flex items-center bg-surface-container-low rounded-xl px-space-sm py-space-xs"><span class="material-symbols-outlined text-secondary mr-space-xs text-xl">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none" placeholder="Search places, cafes, Moi Uni spots..." type="text"/><div class="flex items-center gap-space-xs shrink-0 ml-space-xs"><span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded-full">Town Center</span><span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded-full">Annex</span></div></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-md"><a aria-current="page" class="px-space-sm py-space-xs rounded-xl transition-colors bg-primary-container text-on-primary-container font-label-md" data-path="discover" href="#">Discover</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high px-space-sm py-space-xs rounded-xl transition-colors" data-path="trending-escapes" href="#">Trending Escapes</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high px-space-sm py-space-xs rounded-xl transition-colors" data-path="student-deals" href="#">Student Deals</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high px-space-sm py-space-xs rounded-xl transition-colors" data-path="campus-hubs" href="#">Campus Hubs</a></nav><div class="flex items-center gap-space-sm shrink-0"><button class="inline-flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-xl shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)] transition-all active:scale-95" type="button"><span class="material-symbols-outlined text-lg">explore</span><span>Explore Now</span></button><div class="flex items-center gap-space-xs pl-space-xs border-l border-outline-variant/30"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEObGOArRCCCx7xztZk8pCBE2icCB7EUGH3_3ble9xUkHvIbJ_tug4Hd5nC_bSQOAZCuI2T7Q97ocCOEiuGO5Gzt5wk78LOwbfCg7GHuNhDOlapNL31i3lxcYSOuIUQNt2D37YJgUO3yMe6frJ0qnNEfdzOrkZevNa6fB5cMttNL5s8U53jICyutEDlA-spDjMa3RwhGO3a5A190haf6ppSLWbT-GQbFCP0bVOpuQ"/><div class="hidden md:flex flex-col"><span class="font-label-sm text-label-sm text-on-surface leading-tight">Student ID</span><span class="font-label-xs text-label-xs text-secondary leading-tight">Moi Univ</span></div></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Background Glow & Micro Decorative Layer -->
+<div class="relative w-full overflow-hidden">
+<!-- Ambient glowing gradients (contained, purely decorative) -->
+<div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-primary-fixed-dim/20 blur-3xl pointer-events-none"></div>
+<div class="absolute top-48 -right-20 w-96 h-96 rounded-full bg-tertiary-fixed-dim/25 blur-3xl pointer-events-none"></div>
+<!-- MAIN DISCOVERY WRAPPER -->
+<div class="w-full max-w-7xl mx-auto px-gutter py-space-md sm:py-space-lg flex flex-col gap-space-lg">
+<!-- SECTION 1: SEARCH & FILTER CONTROL BAR -->
+<section class="w-full flex flex-col gap-space-md bg-surface-container-lowest p-space-md sm:p-space-lg rounded-xl shadow-sm">
+<!-- Top Row: Global Search Input + Quick Meta Controls -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-sm">
+<div class="relative flex-1 flex items-center bg-surface-container-low rounded-xl px-space-md py-space-xs transition-all focus-within:ring-2 focus-within:ring-primary/20">
+<span class="material-symbols-outlined text-secondary mr-space-xs text-xl">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none" id="vibesSearchInput" placeholder="Search waterfalls, chill cafes, hiking trails or student sports..." type="text"/>
+<div class="hidden sm:flex items-center gap-space-xs shrink-0 pl-space-xs">
+<kbd class="font-label-xs text-label-xs bg-surface-container-high text-on-surface-variant px-space-xs py-0.5 rounded shadow-sm">⌘K</kbd>
+</div>
+</div>
+<!-- Filter Dropdown & Sorter -->
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="relative">
+<button class="flex items-center gap-space-xs bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-xl hover:bg-surface-container-high transition-colors" id="distanceDropdownBtn" type="button">
+<span class="material-symbols-outlined text-sm text-primary">near_me</span>
+<span id="currentDistanceLabel">Within 15 km of CBD</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<!-- Popover simulated items -->
+<div class="hidden absolute right-0 mt-2 w-56 bg-surface-container-lowest rounded-xl shadow-xl z-20 p-space-xs space-y-1" id="distanceDropdownMenu">
+<button class="w-full text-left font-body-sm text-body-sm px-space-sm py-1.5 rounded-lg text-on-surface hover:bg-surface-container" onclick="setDistanceFilter('Town Center (Within 3 km)')" type="button">Town Center (&lt;3 km)</button>
+<button class="w-full text-left font-body-sm text-body-sm px-space-sm py-1.5 rounded-lg text-primary font-semibold bg-surface-container-low" onclick="setDistanceFilter('Within 15 km of CBD')" type="button">Within 15 km of CBD</button>
+<button class="w-full text-left font-body-sm text-body-sm px-space-sm py-1.5 rounded-lg text-on-surface hover:bg-surface-container" onclick="setDistanceFilter('Greater Uasin Gishu (&lt;35 km)')" type="button">Greater Uasin Gishu (&lt;35 km)</button>
+<button class="w-full text-left font-body-sm text-body-sm px-space-sm py-1.5 rounded-lg text-on-surface hover:bg-surface-container" onclick="setDistanceFilter('Full Rift Valley Day-Trip')" type="button">Full Rift Valley Day-Trip</button>
+</div>
+</div>
+<button class="flex items-center gap-space-xs bg-surface-container-low text-on-surface font-label-md text-label-md px-space-md py-space-xs rounded-xl hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-sm text-tertiary">tune</span>
+<span>Highest Rated</span>
+</button>
+</div>
+</div>
+<!-- Bottom Row: Filter Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 -mx-space-xs px-space-xs">
+<button class="filter-pill shrink-0 bg-primary text-on-primary font-label-sm text-label-sm px-space-md py-1.5 rounded-full transition-all shadow-sm" onclick="setFilterPill(this, 'all')" type="button">
+            All Vibes
+          </button>
+<button class="filter-pill shrink-0 bg-surface-container-lowest text-secondary hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm px-space-md py-1.5 rounded-full transition-all" onclick="setFilterPill(this, 'chill')" type="button">
+            Chilling Spots
+          </button>
+<button class="filter-pill shrink-0 bg-surface-container-lowest text-secondary hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm px-space-md py-1.5 rounded-full transition-all" onclick="setFilterPill(this, 'waterfalls')" type="button">
+            Waterfalls &amp; Hiking
+          </button>
+<button class="filter-pill shrink-0 bg-surface-container-lowest text-secondary hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm px-space-md py-1.5 rounded-full transition-all" onclick="setFilterPill(this, 'sports')" type="button">
+            Sports &amp; Parks
+          </button>
+<button class="filter-pill shrink-0 bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim font-label-sm text-label-sm px-space-md py-1.5 rounded-full transition-all flex items-center gap-1" onclick="setFilterPill(this, 'budget')" type="button">
+<span class="material-symbols-outlined text-xs">savings</span>
+            Student Budget (Under KES 300)
+          </button>
+<button class="filter-pill shrink-0 bg-surface-container-lowest text-secondary hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm px-space-md py-1.5 rounded-full transition-all flex items-center gap-1" onclick="setFilterPill(this, 'open-weekend')" type="button">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Open This Weekend
+          </button>
+</div>
+</section>
+<!-- SECTION 2: HERO BANNER CALLOUT (Highland Escapes) -->
+<section class="relative w-full rounded-xl overflow-hidden bg-on-secondary-fixed text-surface p-space-lg sm:p-space-xl shadow-lg">
+<!-- Contour Pattern Simulation & Glow -->
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container/90 via-on-secondary-fixed/95 to-on-secondary-fixed pointer-events-none"></div>
+<svg class="absolute right-0 top-0 h-full w-2/3 opacity-15 pointer-events-none" fill="none" stroke="currentColor" viewbox="0 0 600 400">
+<path d="M0 100 Q 150 50 300 150 T 600 80" stroke-width="2"></path>
+<path d="M0 160 Q 200 80 400 220 T 600 140" stroke-width="2"></path>
+<path d="M0 220 Q 250 140 450 300 T 600 200" stroke-width="2"></path>
+<path d="M0 280 Q 200 220 380 340 T 600 280" stroke-width="2"></path>
+<path d="M0 340 Q 220 280 420 380 T 600 320" stroke-width="2"></path>
+</svg>
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg">
+<div class="max-w-2xl space-y-space-sm">
+<div class="inline-flex items-center gap-space-xs bg-primary/30 backdrop-blur-md text-primary-fixed font-label-xs text-label-xs px-space-sm py-1 rounded-full">
+<span class="material-symbols-outlined text-xs">hiking</span>
+              HIGHLAND ESCAPES • UASIN GISHU COUNTY
+            </div>
+<h2 class="font-headline-lg text-headline-lg text-white tracking-tight">
+              Looking for a chill spot around Eldoret?
+            </h2>
+<p class="font-body-md text-body-md text-surface-container-low/90 max-w-xl">
+              From breathtaking scenic waterfalls to budget-friendly campus hangouts in Uasin Gishu County. Handpicked by Moi University &amp; UoE students.
+            </p>
+<!-- Micro Stats Ribbon -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="inline-flex items-center gap-1 bg-surface/10 backdrop-blur text-surface font-label-xs text-label-xs px-space-sm py-1 rounded-lg">
+<span>⚡ 24+ Curated Spots</span>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface/10 backdrop-blur text-surface font-label-xs text-label-xs px-space-sm py-1 rounded-lg">
+<span>🎓 Verified Student Discounts</span>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface/10 backdrop-blur text-surface font-label-xs text-label-xs px-space-sm py-1 rounded-lg">
+<span>📍 Real Distance from CBD</span>
+</span>
+</div>
+</div>
+<!-- Banner Action CTAs -->
+<div class="flex flex-col sm:flex-row lg:flex-col gap-space-sm shrink-0 w-full sm:w-auto">
+<button class="inline-flex items-center justify-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-space-lg py-space-sm rounded-xl shadow-md transition-all active:scale-95 text-center" onclick="document.getElementById('destinationsSection').scrollIntoView({ behavior: 'smooth' })" type="button">
+<span>Explore Top Weekend Escapes</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+<button class="inline-flex items-center justify-center gap-space-xs bg-surface/15 hover:bg-surface/25 text-surface font-label-md text-label-md px-space-lg py-space-sm rounded-xl backdrop-blur transition-all active:scale-95 text-center" onclick="openMatatuGuide()" type="button">
+<span class="material-symbols-outlined text-lg">directions_bus</span>
+<span>Spin Matatu Route Guide</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 3: AUTHENTIC DESTINATIONS GRID -->
+<section class="w-full flex flex-col gap-space-md" id="destinationsSection">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-xs">
+<div>
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-primary">Curated Directory</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Verified Local Hangouts</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container px-space-sm py-1 rounded-full">Showing 4 of 28 spots</span>
+</div>
+<!-- 4-Card Responsive Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Card 1: Koromosho Falls -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+<div class="relative w-full h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Photorealistic wide angle of Koromosho Falls near Eldoret Kenya with thunderous natural waterfall cascading through basalt volcanic gorge into the river below lush highland green foliage mist and golden morning daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx5Njz0stPY160xJe2t1HQWKZhF4OgDtljwBhRRj1DfHpuB56YiXcSuHzwiR155FVD_bk2wKNx6-Wn-HrOIXnLE6NSVkOHwq89usD265cX47ljROPUQxPZTpnRV7Uwpo0HcLZbZaiffJXK0R2jiOXMmD3dhjqrwOLDUCaq52_5-YTWKmKr8AUz4oa5ecX9yxIG2hgNr22AhDLrzCIg2OFxNAS0QelBK4iKDCwothY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<!-- Floating Tags -->
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="bg-surface-container-lowest/90 backdrop-blur font-label-xs text-label-xs text-on-surface px-space-sm py-1 rounded-full font-semibold">
+                  Waterfalls &amp; Hiking
+                </span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-xs text-label-xs px-space-sm py-1 rounded-full font-bold">
+                  🔥 Trending
+                </span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-end justify-between text-white">
+<div>
+<h4 class="font-headline-sm text-headline-sm leading-tight text-white drop-shadow">Koromosho Falls</h4>
+<p class="font-body-sm text-body-sm text-surface-container-low flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-fixed">distance</span>
+                    18.5 km from Eldoret CBD (Chepkoilel / Sergoit Road)
+                  </p>
+</div>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.8</span>
+<span class="font-body-sm text-body-sm text-secondary">(342 reviews)</span>
+</div>
+<div class="font-label-sm text-label-sm text-primary font-bold bg-primary-fixed/30 px-space-xs py-0.5 rounded">
+                    KES 200 Student ID / KES 350 Reg
+                  </div>
+</div>
+<div class="pt-space-xs">
+<span class="font-label-xs text-label-xs text-secondary uppercase tracking-wider block mb-1">Highlights &amp; Amenities</span>
+<div class="flex flex-wrap gap-1">
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Scenic Gorge</span>
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Rock Scrambling</span>
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Photography</span>
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Matatu Stage Nearby</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">directions_walk</span>
+                  Boda Boda KES 50 from junction
+                </span>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-xl transition-all flex items-center gap-1 active:scale-95 shadow-sm" onclick="openDetailModal()" type="button">
+<span>View Details</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2: Eldoret Sports Club -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+<div class="relative w-full h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Lush manicured grass athletic fields and scenic pine trees at Eldoret Sports Club Kenya with university athletes training and clubhouse cafe terrace under vibrant blue highland sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6nspoN84wOcMKz8uBP11GeKnB3slGlCMb3TVV81EnqkH2Nj0QVmh802MyLdSAyH2TxaID8ZtVxSkh-J6MFeeoWcvMk8incdIiyIxdHJG_2BbU_sWpl0VA4AtYqhHMB153tkAelNaQtUtPPgAg7A6GuhG_muQqXo08E9UX-P3WVqvSj_p0NC67u7YcE5p1lGrgSRk0xSEJlcp39k72jBzGRPYC_nFJg1EAb98ar7U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<!-- Floating Tags -->
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="bg-surface-container-lowest/90 backdrop-blur font-label-xs text-label-xs text-on-surface px-space-sm py-1 rounded-full font-semibold">
+                  Sports &amp; Parks
+                </span>
+<span class="bg-secondary-container text-on-secondary-fixed font-label-xs text-label-xs px-space-sm py-1 rounded-full font-bold">
+                  🏉 Athletics Hub
+                </span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-end justify-between text-white">
+<div>
+<h4 class="font-headline-sm text-headline-sm leading-tight text-white drop-shadow">Eldoret Sports Club</h4>
+<p class="font-body-sm text-body-sm text-surface-container-low flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-fixed">distance</span>
+                    2.3 km from Eldoret CBD (Off Kaptagat Road)
+                  </p>
+</div>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.7</span>
+<span class="font-body-sm text-body-sm text-secondary">(518 reviews)</span>
+</div>
+<div class="font-label-sm text-label-sm text-primary font-bold bg-primary-fixed/30 px-space-xs py-0.5 rounded">
+                    KES 150 entry / Free Uni Pass
+                  </div>
+</div>
+<div class="pt-space-xs">
+<span class="font-label-xs text-label-xs text-secondary uppercase tracking-wider block mb-1">Highlights &amp; Amenities</span>
+<div class="flex flex-wrap gap-1">
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Chilled Lawns</span>
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Rugby Pitch</span>
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Swimming Pool</span>
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Cafe Terrace</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">directions_bike</span>
+                  Walking distance from town
+                </span>
+<button class="bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md px-space-md py-space-xs rounded-xl transition-all flex items-center gap-1" onclick="triggerSpotAlert('Eldoret Sports Club')" type="button">
+<span>View Details</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3: Two Rivers Dam -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+<div class="relative w-full h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Peaceful sunset over Two Rivers Dam Sosiani River basin Eldoret Kenya with reflections on calm waters, green embankment with wooden picnic benches and bird watchers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIziqx9myfH7Or7gkXDyCsul6Lx_9AN44CmML-VyB-i97smLfHJNX83YBfH-jdJ4nP0xfFF6vWgcFDtkCIOuAG_q1pITaj_OG4N68wjehIeuSGzu9-4QylCKWEt9c6MrizFvI2cgArAocx6DnBPwNFDOjjCVftlgbsdP_cxHOTe-YLIB2qa1PuI81bnoUUOyF6-EHPnlJReqhTcXqoY53IFM1mPB--r9BJqVlTYhU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<!-- Floating Tags -->
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="bg-surface-container-lowest/90 backdrop-blur font-label-xs text-label-xs text-on-surface px-space-sm py-1 rounded-full font-semibold">
+                  Chilling Spots
+                </span>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-xs text-label-xs px-space-sm py-1 rounded-full font-bold">
+                  🌿 Sunset Pick
+                </span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-end justify-between text-white">
+<div>
+<h4 class="font-headline-sm text-headline-sm leading-tight text-white drop-shadow">Two Rivers Dam (Sosiani)</h4>
+<p class="font-body-sm text-body-sm text-surface-container-low flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-fixed">distance</span>
+                    6.8 km from Eldoret CBD
+                  </p>
+</div>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.6</span>
+<span class="font-body-sm text-body-sm text-secondary">(289 reviews)</span>
+</div>
+<div class="font-label-sm text-label-sm text-primary font-bold bg-primary-fixed/30 px-space-xs py-0.5 rounded">
+                    Free Access / Boat KES 300
+                  </div>
+</div>
+<div class="pt-space-xs">
+<span class="font-label-xs text-label-xs text-secondary uppercase tracking-wider block mb-1">Highlights &amp; Amenities</span>
+<div class="flex flex-wrap gap-1">
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Picnic Sites</span>
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Sunset Views</span>
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Bird Watching</span>
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Boda Accessible</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">wb_twilight</span>
+                  Best hours: 4:30 PM – 6:30 PM
+                </span>
+<button class="bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md px-space-md py-space-xs rounded-xl transition-all flex items-center gap-1" onclick="triggerSpotAlert('Two Rivers Dam')" type="button">
+<span>View Details</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 4: Nandi Hills Escarpment -->
+<article class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+<div class="relative w-full h-56 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Breathtaking rolling emerald tea plantations and rugged cliff escarpment overlooking the expansive Great Rift Valley at Nandi Hills near Eldoret Kenya on an adventurous crisp morning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuJ4H4vgtdQpSEN2jqYZpBZbHmQP2gnupQfdyz-41hu7Za6lOuvtTa5WB0p_b9VvTiq9Wn-IyDDTFT_Bukhfw3k46yunpNDAvpjJ7aRN2jc_taFUA0rtm9YXt4MSBBjjci4rQkQy6E4iVJ9RqTCim8QC3_Ndyc3F0NmFHJbIIWpW6Hx2MaJdfcKiJuU5yp8iN9LdR1ci8bOY-MgtVvWoOBB_bfVY0gNNAf_waouCs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<!-- Floating Tags -->
+<div class="absolute top-space-sm left-space-sm flex items-center gap-space-xs">
+<span class="bg-surface-container-lowest/90 backdrop-blur font-label-xs text-label-xs text-on-surface px-space-sm py-1 rounded-full font-semibold">
+                  Waterfalls &amp; Hiking
+                </span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-xs text-label-xs px-space-sm py-1 rounded-full font-bold">
+                  🌄 Day Trip
+                </span>
+</div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm flex items-end justify-between text-white">
+<div>
+<h4 class="font-headline-sm text-headline-sm leading-tight text-white drop-shadow">Nandi Hills Escarpment</h4>
+<p class="font-body-sm text-body-sm text-surface-container-low flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary-fixed">distance</span>
+                    24.0 km from Eldoret CBD
+                  </p>
+</div>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.9</span>
+<span class="font-body-sm text-body-sm text-secondary">(620 reviews)</span>
+</div>
+<div class="font-label-sm text-label-sm text-primary font-bold bg-primary-fixed/30 px-space-xs py-0.5 rounded">
+                    KES 250 Eco-Conservation Fee
+                  </div>
+</div>
+<div class="pt-space-xs">
+<span class="font-label-xs text-label-xs text-secondary uppercase tracking-wider block mb-1">Highlights &amp; Amenities</span>
+<div class="flex flex-wrap gap-1">
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Tea Estate Trails</span>
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Cloud Forest Vistas</span>
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Campfires</span>
+<span class="font-label-xs text-label-xs bg-surface-container text-on-surface-variant px-space-xs py-0.5 rounded">Group Vans</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">groups</span>
+                  Perfect for class weekend crews
+                </span>
+<button class="bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md px-space-md py-space-xs rounded-xl transition-all flex items-center gap-1" onclick="triggerSpotAlert('Nandi Hills Escarpment')" type="button">
+<span>View Details</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION 5: TELEMETRY & GRAFANA SIMULATION LIVE DOCK -->
+<section class="w-full bg-surface-container rounded-xl p-space-md sm:p-space-lg shadow-sm">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div class="space-y-space-xs max-w-xl">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-xs text-label-xs uppercase tracking-wider text-secondary">
+                Grafana &amp; Friends Kenya: Eldoret Edition • Real User Monitoring (RUM)
+              </span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Community Telemetry &amp; OpenTelemetry Bridge</h4>
+<p class="font-body-sm text-body-sm text-secondary">
+              Simulate high concurrency matatu route queries, test frontend core web vitals, and measure synthetic trace latency from local Eldoret edge nodes.
+            </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 w-full sm:w-auto">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs bg-on-secondary-fixed hover:bg-secondary text-surface font-label-md text-label-md px-space-lg py-space-sm rounded-xl transition-all shadow-sm active:scale-95" id="simulateLatencyBtn" onclick="runSyntheticTrafficTest()" type="button">
+<span class="material-symbols-outlined text-base">speed</span>
+<span>Test Frontend Latency / Simulate Traffic</span>
+</button>
+</div>
+</div>
+<!-- Live Telemetry Feedback Panel -->
+<div class="mt-space-md grid grid-cols-2 md:grid-cols-5 gap-space-xs bg-surface-container-lowest p-space-sm rounded-xl">
+<div class="flex flex-col p-space-xs">
+<span class="font-label-xs text-label-xs text-secondary uppercase">Synthetic TTFB</span>
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold" id="rumTtfb">38ms</span>
+<span class="font-label-xs text-label-xs text-primary bg-primary-fixed/40 px-1 py-0.2 rounded">Fast</span>
+</div>
+</div>
+<div class="flex flex-col p-space-xs">
+<span class="font-label-xs text-label-xs text-secondary uppercase">DOM Ready</span>
+<span class="font-label-md text-label-md text-on-surface font-bold" id="rumDomReady">142ms</span>
+</div>
+<div class="col-span-2 md:col-span-1 flex flex-col p-space-xs">
+<span class="font-label-xs text-label-xs text-secondary uppercase">OTel Ingest</span>
+<span class="font-label-xs text-label-xs text-on-surface font-mono truncate" title="otel-gateway.eldoret-vibes.internal:4318">otel-gateway:4318 [OK]</span>
+</div>
+<div class="col-span-2 md:col-span-1 flex flex-col p-space-xs">
+<span class="font-label-xs text-label-xs text-secondary uppercase">Active Trace ID</span>
+<span class="font-label-xs text-label-xs font-mono text-secondary truncate" id="rumTraceId">0a8f9c2d1b74e...</span>
+</div>
+<div class="col-span-2 md:col-span-1 flex items-center justify-end p-space-xs">
+<span class="inline-flex items-center gap-1 font-label-xs text-label-xs text-primary bg-primary-fixed/50 px-space-sm py-1 rounded-full font-semibold" id="rumStatusBadge">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+              🟢 Telemetry Agent Active
+            </span>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- SECTION 4: INTERACTIVE DETAIL MODAL (KOROMOSHO FALLS SPOTLIGHT) -->
+<div aria-modal="true" class="fixed inset-0 z-50 flex items-center justify-center p-space-sm sm:p-space-md bg-on-secondary-fixed/50 backdrop-blur-md hidden transition-opacity duration-200" id="detailModalBackdrop" role="dialog">
+<div class="bg-surface-container-lowest w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[921px] transition-all transform scale-95" id="detailModalCard">
+<!-- Modal Header with Image Backdrop and Dismiss -->
+<div class="relative w-full h-48 sm:h-56">
+<img class="w-full h-full object-cover" data-alt="Breathtaking river gorge canyon and dramatic natural waterfall at Koromosho near Eldoret Kenya with emerald trees and adventure trails illuminated by morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnkqwYZ4QenlC96WgXrYVJnitHiIaasH11954ZtxSfQpcVwvdVzBWrBdVGTDXKNFjMl7UktLwhdGe9BdHZhacLdbMP-qZnniH2_mzUooNurJbbPTzcssqYC92RxzwWVnT3CsJR3LPnz0gdYKgWkzcYmyjF6yq40vDTQ4gK8i16kohuqqIizcOo2qZYke4zL_LKSayCqulj5Im9ZMjNoQtIctxj3Px14nNRDOINnCo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/40 to-transparent"></div>
+<!-- Dismiss Button -->
+<button aria-label="Close modal" class="absolute top-space-sm right-space-sm w-9 h-9 rounded-full bg-surface-container-lowest/80 hover:bg-surface-container-lowest text-on-surface flex items-center justify-center backdrop-blur shadow transition-all" onclick="closeDetailModal()" type="button">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+<div class="absolute bottom-space-md left-space-md right-space-md">
+<span class="inline-flex items-center gap-1 bg-primary text-on-primary font-label-xs text-label-xs px-space-sm py-0.5 rounded-full mb-1">
+<span class="material-symbols-outlined text-xs">verified</span>
+            Verified Student Favorite • Uasin Gishu County
+          </span>
+<h3 class="font-headline-md text-headline-md text-white drop-shadow">Koromosho Falls &amp; River Sosiani Gorge</h3>
+</div>
+</div>
+<!-- Modal Body (Scrollable) -->
+<div class="p-space-md sm:p-space-lg overflow-y-auto space-y-space-md">
+<!-- Quick Meta Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">distance</span>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-secondary uppercase">Distance</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">18.5 km (35 mins)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">schedule</span>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-secondary uppercase">Operating Hours</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">07:30 AM – 06:30 PM</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-xl">payments</span>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-secondary uppercase">Entry Fee</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">KES 200 w/ Uni ID</span>
+</div>
+</div>
+</div>
+<!-- Student Perks Callout -->
+<div class="bg-primary-fixed/20 p-space-sm rounded-xl flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5">school</span>
+<div>
+<h5 class="font-label-md text-label-md text-on-primary-fixed font-bold">Moi Uni &amp; UoE Special Access</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Show your student badge on Fridays for a free guided gorge walk, campfire pit reservation, and access to group picnic shelter.
+            </p>
+</div>
+</div>
+<!-- Practical Transport & Safety Tips -->
+<div class="space-y-space-xs">
+<h5 class="font-label-md text-label-md text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm">directions_bus</span>
+            Practical Transport &amp; Route Guide
+          </h5>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+            Take <strong class="text-on-surface font-semibold">Matatu Line 9 (Sergoit / Chepkoilel stage)</strong> from Eldoret Central Stage to the main junction (KES 70), then hop onto a 5-minute local Boda boda (KES 50). Sturdy shoes or trail runners are strictly recommended for the lower canyon path.
+          </p>
+</div>
+<!-- Mini Interactive Action Toggles -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<button class="flex items-center gap-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm px-space-md py-space-xs rounded-xl transition-colors" onclick="toggleSavedWishlist(this)" type="button">
+<span class="material-symbols-outlined text-sm">favorite_border</span>
+<span>Save to Weekend Wishlist</span>
+</button>
+<button class="flex items-center gap-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm px-space-md py-space-xs rounded-xl transition-colors" onclick="shareSpotUrl('Koromosho Falls')" type="button">
+<span class="material-symbols-outlined text-sm">share</span>
+<span>Share Spot</span>
+</button>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm shrink-0">
+<span class="font-label-xs text-label-xs text-secondary">
+          Coordinates: 0.5849° N, 35.1983° E • River Sosiani
+        </span>
+<div class="flex items-center gap-space-xs w-full sm:w-auto">
+<button class="w-1/2 sm:w-auto font-label-md text-label-md text-on-surface px-space-md py-space-xs rounded-xl hover:bg-surface-container transition-colors text-center" onclick="closeDetailModal()" type="button">
+            Close
+          </button>
+<button class="w-1/2 sm:w-auto inline-flex items-center justify-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-xl shadow transition-all active:scale-95" onclick="getDirectionsAlert('Koromosho Falls')" type="button">
+<span class="material-symbols-outlined text-base">directions</span>
+<span>Get Directions</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Micro-Interactions JavaScript -->
+<script>
+    // Distance Dropdown Toggle
+    const distBtn = document.getElementById('distanceDropdownBtn');
+    const distMenu = document.getElementById('distanceDropdownMenu');
+    if (distBtn && distMenu) {
+      distBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        distMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', () => {
+        distMenu.classList.add('hidden');
+      });
+    }
+
+    function setDistanceFilter(label) {
+      const lbl = document.getElementById('currentDistanceLabel');
+      if (lbl) lbl.textContent = label;
+      distMenu.classList.add('hidden');
+      runLiveSearch();
+    }
+
+    // Filter Pills Toggling
+    function setFilterPill(btn, category) {
+      document.querySelectorAll('.filter-pill').forEach(el => {
+        el.className = 'filter-pill shrink-0 bg-surface-container-lowest text-secondary hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm px-space-md py-1.5 rounded-full transition-all';
+      });
+      btn.className = 'filter-pill shrink-0 bg-primary text-on-primary font-label-sm text-label-sm px-space-md py-1.5 rounded-full transition-all shadow-sm';
+      runLiveSearch();
+    }
+
+    // Modal Display Controls
+    function openDetailModal() {
+      const backdrop = document.getElementById('detailModalBackdrop');
+      const card = document.getElementById('detailModalCard');
+      if (backdrop && card) {
+        backdrop.classList.remove('hidden');
+        setTimeout(() => {
+          card.classList.remove('scale-95');
+          card.classList.add('scale-100');
+        }, 10);
+      }
+    }
+
+    function closeDetailModal() {
+      const backdrop = document.getElementById('detailModalBackdrop');
+      const card = document.getElementById('detailModalCard');
+      if (backdrop && card) {
+        card.classList.remove('scale-100');
+        card.classList.add('scale-95');
+        setTimeout(() => {
+          backdrop.classList.add('hidden');
+        }, 150);
+      }
+    }
+
+    // Close on backdrop tap
+    document.getElementById('detailModalBackdrop')?.addEventListener('click', (e) => {
+      if (e.target.id === 'detailModalBackdrop') closeDetailModal();
+    });
+
+    // Keyboard shortcut ⌘K focus
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        document.getElementById('vibesSearchInput')?.focus();
+      }
+      if (e.key === 'Escape') {
+        closeDetailModal();
+      }
+    });
+
+    function toggleSavedWishlist(btn) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const span = btn.querySelector('span:last-child');
+      if (icon.textContent === 'favorite_border') {
+        icon.textContent = 'favorite';
+        icon.classList.add('text-primary');
+        icon.style.fontVariationSettings = "'FILL' 1";
+        span.textContent = 'Saved to Wishlist!';
+        btn.classList.add('bg-primary-fixed/30');
+      } else {
+        icon.textContent = 'favorite_border';
+        icon.classList.remove('text-primary');
+        icon.style.fontVariationSettings = "'FILL' 0";
+        span.textContent = 'Save to Weekend Wishlist';
+        btn.classList.remove('bg-primary-fixed/30');
+      }
+    }
+
+    function shareSpotUrl(spotName) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href);
+        alert(`Link to ${spotName} copied to clipboard! Share it with your campus crew.`);
+      } else {
+        alert(`Sharing: ${spotName}`);
+      }
+    }
+
+    function getDirectionsAlert(spotName) {
+      alert(`Launching navigation routes for ${spotName} via Matatu stages and local Boda networks.`);
+    }
+
+    function triggerSpotAlert(spotName) {
+      alert(`Loading spot details and student reviews for: ${spotName}`);
+    }
+
+    function openMatatuGuide() {
+      alert("Matatu Route Wheel: Select Stage 1 (Annex / Langas) or Stage 9 (Chepkoilel / Sergoit) for standard KES 50–70 student fares.");
+    }
+
+    function runLiveSearch() {
+      // Mock filter feedback for snappy feel
+      const input = document.getElementById('vibesSearchInput');
+      const status = document.getElementById('rumTraceId');
+      if (status) {
+        status.textContent = 'trace_' + Math.random().toString(36).substring(2, 9);
+      }
+    }
+
+    document.getElementById('vibesSearchInput')?.addEventListener('input', runLiveSearch);
+
+    // Grafana Telemetry Simulation
+    function runSyntheticTrafficTest() {
+      const btn = document.getElementById('simulateLatencyBtn');
+      const ttfb = document.getElementById('rumTtfb');
+      const dom = document.getElementById('rumDomReady');
+      const trace = document.getElementById('rumTraceId');
+      const badge = document.getElementById('rumStatusBadge');
+
+      if (!btn) return;
+      btn.disabled = true;
+      btn.innerHTML = `<span class="material-symbols-outlined text-base animate-spin">refresh</span><span>Transmitting RUM Spans...</span>`;
+
+      setTimeout(() => {
+        const randLatency = Math.floor(Math.random() * 20) + 18;
+        const randDom = Math.floor(Math.random() * 40) + 95;
+        const newTrace = '0a8f' + Math.random().toString(16).substr(2, 10);
+
+        if (ttfb) ttfb.textContent = randLatency + 'ms';
+        if (dom) dom.textContent = randDom + 'ms';
+        if (trace) trace.textContent = newTrace;
+
+        btn.disabled = false;
+        btn.innerHTML = `<span class="material-symbols-outlined text-base">speed</span><span>Test Frontend Latency / Simulate Traffic</span>`;
+        
+        if (badge) {
+          badge.className = 'inline-flex items-center gap-1 font-label-xs text-label-xs text-on-primary bg-primary px-space-sm py-1 rounded-full font-semibold transition-all';
+          badge.innerHTML = `<span class="material-symbols-outlined text-xs">done_all</span> 200 OK Trace Emitted`;
+          setTimeout(() => {
+            badge.className = 'inline-flex items-center gap-1 font-label-xs text-label-xs text-primary bg-primary-fixed/50 px-space-sm py-1 rounded-full font-semibold';
+            badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span> 🟢 Telemetry Agent Active`;
+          }, 2400);
+        }
+      }, 700);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low shadow-[0_-1px_8px_rgba(0,0,0,0.02)] mt-margin-lg"><div class="w-full px-gutter py-space-xl"><div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg pb-space-lg"><div class="space-y-space-xs"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Eldoret Vibes</span><span class="inline-flex items-center gap-space-xs bg-tertiary-fixed text-on-tertiary-fixed font-label-xs text-label-xs px-space-sm py-0.5 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Rift Valley Edition</span></div><p class="font-body-sm text-body-sm text-secondary max-w-lg">Hyper-local town companion and curated hangouts for students and young creators across Eldoret, Chepkoilel, Kesses, and Annex.</p><p class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Engineered in partnership with Grafana &amp; Friends Kenya: Eldoret Edition</p></div><div class="flex flex-wrap items-center gap-space-lg"><div class="flex flex-col gap-space-xs"><span class="font-label-xs text-label-xs uppercase tracking-wider text-secondary">Community &amp; Code</span><div class="flex items-center gap-space-md"><a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors flex items-center gap-1" href="#"><span class="material-symbols-outlined text-sm">code</span>GitHub Repository</a><a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors flex items-center gap-1" href="#"><span class="material-symbols-outlined text-sm">groups</span>Community Discord</a><a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors flex items-center gap-1" href="#"><span class="material-symbols-outlined text-sm">menu_book</span>API Docs</a></div></div><div class="bg-surface-container p-space-sm rounded-xl flex items-center gap-space-md shadow-[0_2px_8px_-2px_rgba(15,23,42,0.04)]"><div class="flex flex-col"><span class="font-label-xs text-label-xs text-secondary uppercase">Live RUM Latency</span><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-md text-label-md text-on-surface">24ms</span><span class="font-label-xs text-label-xs text-primary bg-primary-fixed px-1.5 py-0.2 rounded">p95 Good</span></div></div><button class="bg-on-secondary-fixed text-surface font-label-sm text-label-sm px-space-sm py-space-xs rounded-xl hover:bg-secondary transition-colors flex items-center gap-1 shrink-0" type="button"><span class="material-symbols-outlined text-sm">speed</span>Test Frontend Latency / Simulate Traffic</button></div></div></div><div class="pt-space-md border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-secondary font-label-xs text-label-xs"><span>© 2025 Eldoret Vibes. Built for students, explorers &amp; community builders.</span><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Campus Partner Guidelines</a><a class="hover:text-on-surface transition-colors" href="#">Telemetry Status</a></div></div></div></footer></body></html>

@@ -1,0 +1,8 @@
+{
+  "name": "Eldoret & Kapsabet Vibes - Highland Explorer",
+  "description": "Hyper-local Rift Valley travel and student companion for Eldoret hangouts, waterfalls, trails, sports clubs, and tea escarpments with Grafana Faro RUM readiness.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
