@@ -15,40 +15,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-
-    <!-- ========================================================================= -->
-    <!-- GRAFANA FARO WEB SDK (Real User Monitoring - RUM) READY HOOK              -->
-    <!-- To activate real Grafana Cloud Faro RUM telemetry:                       -->
-    <!-- 1. Uncomment the <script> tags below (or supply your own CDN bundle)      -->
-    <!-- 2. Set your Grafana Faro collector URL (or pass it via VITE_FARO_URL)    -->
-    <!-- ========================================================================= -->
-    <script>
-      window.GRAFANA_FARO_CONFIG = {
-        enabled: false,
-        url: '', // e.g. "https://faro-collector-prod-eu-west-0.grafana.net/collect/<app_key>"
-        appName: 'eldoret-kapsabet-vibes',
-        appVersion: '1.0.0',
-        environment: 'production',
-      };
-    </script>
-    <!--
-    Uncomment below to enable Grafana Faro via CDN:
-    <script src="https://unpkg.com/@grafana/faro-web-sdk@^1.4.0/dist/bundle/faro.iife.js"></script>
-    <script>
-      if (window.GrafanaFaroWebSdk && window.GRAFANA_FARO_CONFIG.url) {
-        window.faro = window.GrafanaFaroWebSdk.initializeFaro({
-          url: window.GRAFANA_FARO_CONFIG.url,
-          app: {
-            name: window.GRAFANA_FARO_CONFIG.appName,
-            version: window.GRAFANA_FARO_CONFIG.appVersion,
-            environment: window.GRAFANA_FARO_CONFIG.environment,
-          },
-        });
-        window.GRAFANA_FARO_CONFIG.enabled = true;
-        console.log('[Grafana Faro] Web SDK initialized successfully.');
-      }
-    </script>
-    -->
   </head>
   <body class="bg-[#fbf9f8] text-[#1b1c1c] antialiased">
     <div id="root"></div>

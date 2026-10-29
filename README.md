@@ -84,9 +84,9 @@ Functional Requirements:
   - **Kiborgok / Tindinyo Forest Falls** (indigenous rainforest plunge pool & nature trail)
   - **Koromosho Falls & River Sosiani Gorge**, **Eldoret Sports Club**, **Two Rivers Dam**, and more.
 - **Interactive Detail Modal**: Displays location metadata, entry fees with student ID discounts, practical Matatu and Boda Boda transit guides, and telemetry traces.
-- **Grafana Faro Web SDK Ready**:
-  - Global `window.GRAFANA_FARO_CONFIG` hook and commented CDN tags in `/index.html`.
-  - Built-in "Configure Grafana Faro" drawer with one-click code copy and live in-browser injection testing.
+- **Grafana Faro Web SDK v2**:
+  - Initialized from npm in `src/faro.ts` with web vitals, errors, tracing, navigation tracking, and Session Replay.
+  - Built-in "Configure Grafana Faro" drawer showing live telemetry events.
   - Telemetry service dispatching real-time RUM events (`view_destination`, `directions_requested`, `route_selected`, `search_query_changed`).
 - **Google Cloud Run Ready**:
   - Configured to bind on `0.0.0.0` and `process.env.PORT || 8080`.
@@ -151,25 +151,12 @@ gcloud run deploy eldoret-vibes \
 
 ---
 
-## 📊 Adding the Grafana Faro CDN Script
+## 📊 Grafana Faro Frontend Observability
 
-To activate live Real User Monitoring (RUM) in Grafana Cloud:
-1. Open `index.html`.
-2. Locate the `<!-- GRAFANA FARO WEB SDK READY HOOK -->` section in the `<head>`.
-3. Uncomment the CDN `<script>` tag and paste your Grafana Cloud Faro Collector URL:
-   ```html
-   <script src="https://unpkg.com/@grafana/faro-web-sdk@^1.4.0/dist/bundle/faro.iife.js"></script>
-   <script>
-     if (window.GrafanaFaroWebSdk) {
-       window.faro = window.GrafanaFaroWebSdk.initializeFaro({
-         url: "https://faro-collector-prod-eu-west-0.grafana.net/collect/YOUR_APP_KEY",
-         app: {
-           name: "eldoret-kapsabet-vibes",
-           version: "1.0.0",
-           environment: "production",
-         },
-       });
-     }
-   </script>
-   ```
-4. Or use the in-app **Configure Grafana Faro** modal to test live event emissions in your browser!
+Grafana Faro Web SDK v2 is installed from npm (`@grafana/faro-react`, `@grafana/faro-web-tracing`, `@grafana/faro-instrumentation-replay`). Run `npm install` after checkout to install the SDK and generate/update the lockfile.
+
+- **Setup**: `src/faro.ts` calls `initializeFaro` with the Grafana Cloud collector URL, app name/version, and `import.meta.env.MODE` as the environment. It is imported as the very first line of `src/main.tsx`, so Faro starts before React renders.
+- **Instrumentations**: default web instrumentations (errors, console, web vitals, sessions), `TracingInstrumentation` for fetch/XHR traces, and experimental automatic navigation tracking (`trackNavigation`).
+- **Session Replay (strict masking)**: `ReplayInstrumentation` blocks `.grafana-block`, images, SVGs, media, canvases, iframes, embeds, and hidden inputs from recordings. Add `.grafana-block` to any element that must never be captured, or `.grafana-ignore` to ignore its interactions.
+- **Noise filtering**: ResizeObserver loop warnings, opaque `Script error.` messages, and browser extension errors are ignored.
+- **Custom events**: `src/services/faro.ts` (`faroService`) forwards app events through `faro.api.pushEvent`, with attribute values stringified.

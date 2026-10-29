@@ -1,3 +1,5 @@
+import { faro } from '@grafana/faro-react';
+
 export interface FaroTelemetryEvent {
   id: string;
   timestamp: string;
@@ -6,29 +8,8 @@ export interface FaroTelemetryEvent {
   source: 'live_faro_sdk' | 'synthetic_rum';
 }
 
-declare global {
-  interface Window {
-    GRAFANA_FARO_CONFIG?: {
-      enabled: boolean;
-      url: string;
-      appName: string;
-      appVersion: string;
-      environment: string;
-    };
-    faro?: {
-      api: {
-        pushEvent: (name: string, attributes?: Record<string, any>) => void;
-        pushMeasurement: (payload: { type: string; values: Record<string, number> }) => void;
-        pushError: (error: Error | string) => void;
-      };
-    };
-    GrafanaFaroWebSdk?: {
-      initializeFaro: (config: any) => any;
-    };
-  }
-}
-
 class FaroService {
+  private collectorUrl = '';
   private listeners: ((events: FaroTelemetryEvent[]) => void)[] = [];
   private eventHistory: FaroTelemetryEvent[] = [
     {
@@ -37,7 +18,7 @@ class FaroService {
       name: 'faro_sdk_ready',
       attributes: {
         app: 'eldoret-kapsabet-vibes',
-        collector_state: 'ready_for_cdn',
+        collector_state: 'npm_sdk',
         environment: 'production'
       },
       source: 'synthetic_rum'
@@ -45,25 +26,15 @@ class FaroService {
   ];
 
   public isSdkLoaded(): boolean {
-    return typeof window !== 'undefined' && !!window.faro;
+    return !!faro.api;
   }
 
   public getCollectorUrl(): string {
-    if (typeof window === 'undefined') return '';
-    return window.GRAFANA_FARO_CONFIG?.url || '';
+    return this.collectorUrl;
   }
 
   public setCollectorUrl(url: string) {
-    if (typeof window !== 'undefined') {
-      window.GRAFANA_FARO_CONFIG = window.GRAFANA_FARO_CONFIG || {
-        enabled: false,
-        url: '',
-        appName: 'eldoret-kapsabet-vibes',
-        appVersion: '1.0.0',
-        environment: 'production'
-      };
-      window.GRAFANA_FARO_CONFIG.url = url;
-    }
+    this.collectorUrl = url;
   }
 
   public trackEvent(name: string, attributes: Record<string, any> = {}) {
@@ -80,10 +51,9 @@ class FaroService {
       source: isLive ? 'live_faro_sdk' : 'synthetic_rum'
     };
 
-    // If real Grafana Faro SDK is active on window, dispatch real telemetry!
-    if (isLive && window.faro) {
+    if (isLive) {
       try {
-        window.faro.api.pushEvent(name, attributes);
+        faro.api?.pushEvent(name, this.stringifyAttributes(attributes));
       } catch (err) {
         console.warn('[Grafana Faro] Error pushing live event:', err);
       }
@@ -98,9 +68,9 @@ class FaroService {
   }
 
   public trackMeasurement(name: string, value: number) {
-    if (this.isSdkLoaded() && window.faro) {
+    if (this.isSdkLoaded()) {
       try {
-        window.faro.api.pushMeasurement({
+        faro.api?.pushMeasurement({
           type: name,
           values: { value }
         });
@@ -111,9 +81,9 @@ class FaroService {
   }
 
   public trackError(err: Error | string) {
-    if (this.isSdkLoaded() && window.faro) {
+    if (this.isSdkLoaded()) {
       try {
-        window.faro.api.pushError(err);
+        faro.api?.pushError(typeof err === 'string' ? new Error(err) : err);
       } catch (e) {
         console.warn('[Grafana Faro] Error pushing error:', e);
       }
@@ -138,66 +108,21 @@ class FaroService {
     this.listeners.forEach(l => l(this.getHistory()));
   }
 
-  /**
-   * Dynamically loads the Grafana Faro Web SDK CDN script if user injects it via UI
-   */
   public async injectFaroCDN(collectorUrl: string): Promise<boolean> {
-    if (typeof window === 'undefined') return false;
     this.setCollectorUrl(collectorUrl);
-
-    if (window.faro) {
-      return true;
+    const isLive = this.isSdkLoaded();
+    if (isLive) {
+      this.trackEvent('faro_collector_url_set', { collector_url: collectorUrl });
     }
+    return isLive;
+  }
 
-    return new Promise((resolve) => {
-      // Check if already injected
-      const existingScript = document.getElementById('grafana-faro-cdn-script');
-      if (existingScript) {
-        if (window.GrafanaFaroWebSdk) {
-          window.faro = window.GrafanaFaroWebSdk.initializeFaro({
-            url: collectorUrl,
-            app: {
-              name: 'eldoret-kapsabet-vibes',
-              version: '1.0.0',
-              environment: 'production'
-            }
-          });
-          this.trackEvent('faro_initialized_live', { url: collectorUrl });
-          return resolve(true);
-        }
-      }
-
-      const script = document.createElement('script');
-      script.id = 'grafana-faro-cdn-script';
-      script.src = 'https://unpkg.com/@grafana/faro-web-sdk@^1.4.0/dist/bundle/faro.iife.js';
-      script.async = true;
-
-      script.onload = () => {
-        if (window.GrafanaFaroWebSdk) {
-          window.faro = window.GrafanaFaroWebSdk.initializeFaro({
-            url: collectorUrl,
-            app: {
-              name: 'eldoret-kapsabet-vibes',
-              version: '1.0.0',
-              environment: 'production'
-            }
-          });
-          this.trackEvent('faro_sdk_injected_successfully', {
-            collector_url: collectorUrl
-          });
-          resolve(true);
-        } else {
-          resolve(false);
-        }
-      };
-
-      script.onerror = () => {
-        console.error('Failed to load Grafana Faro CDN script');
-        resolve(false);
-      };
-
-      document.head.appendChild(script);
+  private stringifyAttributes(attributes: Record<string, any>): Record<string, string> {
+    const result: Record<string, string> = {};
+    Object.entries(attributes).forEach(([key, value]) => {
+      result[key] = typeof value === 'string' ? value : JSON.stringify(value);
     });
+    return result;
   }
 }
 
